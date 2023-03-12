@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&family=Roboto+Mono:wght@700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,18 +12,32 @@ body {
   align-items: center;
   height: 100vh;
 }
-
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   background-color: #ffffff;
-  width: 300px;
-  height: 450px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 0px 20px 20px 0px;
+  padding: 31px 36px 39px 27px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.image {
+  width: 100%;
+}
+
 .titulo {
   font-family: "Roboto", sans-serif;
   color: #929397;
   font-size: 16px;
-  padding: 15px 20px 10px 20px;
+  /* padding: 15px 20px 10px 20px; */
   text-transform: uppercase; /*transfoma as palavras em maiusculas*/
   letter-spacing: 3px;
   
@@ -31,28 +46,34 @@ body {
   font-family: "Roboto Mono", monospace;
   color: #1c232b;
   font-size: 35px;
-  padding: 10px 20px 10px 20px; /*espaçamento interno*/
+  /* padding: 10px 20px 10px 20px; espaçamento interno */
   
 }
 .descricao {
   font-family: "Montserrat", sans-serif;
   color: #6c7289;
   font-size: 16px;
-  padding: 15px 15px 10px 20px;
+  /* padding: 15px 15px 10px 20px; */
   
 }
 .valor {
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px 10px 20px;
+  /* padding: 15px 20px 15px 20px; */
   
 }
+
+.precos-container {
+  display: flex;
+  align-items: center;
+}
+
 .preco {
   color: #6c7289;
   font-size: 16px;
   text-decoration: line-through; /*coloca a linha no texto*/
-  float: right; /*ponto flutuante a direita*/
-  padding: 0px 70px 0px 0px;
+  margin-left: 10px;
+  /* padding: 0px 70px 0px 0px; */
   
 }
 button:hover {
@@ -63,13 +84,13 @@ button:hover {
 .botao {
   background: #3d8168;
   border-radius: 8px;
-  width: 237px;
+  width: 100%;
   border: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
   padding: 10px 15px;
-  margin-left: 10%;
+  margin: 0 auto;
   transition: 0.3s;
 }
 .material-symbols-outlined {
@@ -83,8 +104,26 @@ button:hover {
   padding: 3px 5px 3px 5px;
 }
 /* maximo tamanho da tela */
-@media (max-width: 375px) {
+@media (max-width: 650px) {
+  .main-container {
+    flex-direction: column;
+    margin: 0 1rem;
+  }
   .container {
-    width:auto;
+    border-radius: 0px 0px 20px 20px;
+    padding-bottom: 26px;
+    height: auto;
+  }
+  .img__perfume {
+    max-height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+  }
+  .descricao {
+    margin: 10px 0 10px;
+  }
+  .botao {
+    margin-top: 10px;
   }
 }
