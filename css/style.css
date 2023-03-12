@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&family=Roboto+Mono:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f3eae3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 300px;
+  height: 450px;
+  border-radius: 0px 20px 20px 0px;
+}
+.titulo {
+  font-family: "Roboto", sans-serif;
+  color: #929397;
+  font-size: 16px;
+  padding: 15px 20px 10px 20px;
+  text-transform: uppercase; /*transfoma as palavras em maiusculas*/
+  letter-spacing: 3px;
+  
+}
+.titulo__principal {
+  font-family: "Roboto Mono", monospace;
+  color: #1c232b;
+  font-size: 35px;
+  padding: 10px 20px 10px 20px; /*espaçamento interno*/
+  
+}
+.descricao {
+  font-family: "Montserrat", sans-serif;
+  color: #6c7289;
+  font-size: 16px;
+  padding: 15px 15px 10px 20px;
+  
+}
+.valor {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px 10px 20px;
+  
+}
+.preco {
+  color: #6c7289;
+  font-size: 16px;
+  text-decoration: line-through; /*coloca a linha no texto*/
+  float: right; /*ponto flutuante a direita*/
+  padding: 0px 70px 0px 0px;
+  
+}
+button:hover {
+  filter: brightness(
+    1.1
+  ); /*possibilita um elemento ter o seu estilo alterado através da ação do usuário*/
+}
+.botao {
+  background: #3d8168;
+  border-radius: 8px;
+  width: 237px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
+  margin-left: 10%;
+  transition: 0.3s;
+}
+.material-symbols-outlined {
+  color: #ffffff;
+  border: 0px solid #ffffff;
+}
+.texto {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 3px 5px 3px 5px;
+}
+/* maximo tamanho da tela */
+@media (max-width: 375px) {
+  .container {
+    width:auto;
+  }
+}
